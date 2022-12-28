@@ -244,9 +244,9 @@
 
         <div class="box">
             <h3>contact info</h3>
-            <a href="#">+123-456-7890</a>
-            <a href="#">example@gmail.com</a>
-            <a href="#">mumbai, india - 400104</a>
+            <a href="#">+6212345678</a>
+            <a href="#">kelompok07@gmail.com</a>
+            <a href="#">bojongsoang, indonesia - 400104</a>
             <img src="images/payment.png" alt="">
         </div>
 
