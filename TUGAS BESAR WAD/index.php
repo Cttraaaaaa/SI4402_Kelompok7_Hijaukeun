@@ -5,13 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hijaukeun</title>
-
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Overpass', sans-serif;
+        }
+    
+    </style>
 </head>
 <body>
 
@@ -133,7 +137,7 @@
             <div class="image">
                 <img src="images/HUTAN1.jpeg" alt="">
                 <div class="icons">
-                    <a href="login_form.php" class="cart-btn">Donate Now</a>
+                    <a href="DonateNow.php" name="donatenow" value="kalimantan" class="cart-btn">Donate Now</a>
                 </div>
             </div>
 
@@ -146,7 +150,7 @@
             <div class="image">
                 <img src="images/HUTAN2.jpg" alt="">
                 <div class="icons">
-                    <a href="login_form.php" class="cart-btn">Donate Now</a>
+                    <a href="DonateNow.php" name="donatenow" value="Banten" class="cart-btn">Donate Now</a>
                 </div>
             </div>
             <div class="content">
@@ -158,7 +162,7 @@
             <div class="image">
                 <img src="images/HUTAN3.jpg" alt="">
                 <div class="icons">
-                    <a href="login_form.php" class="cart-btn">Donate Now</a>
+                    <a href="DonateNow.php" name="donatenow" value="Sumatera" class="cart-btn">Donate Now</a>
                 </div>
             </div>
 
@@ -171,12 +175,12 @@
             <div class="image">
                 <img src="images/HUTAN3.jpg" alt="">
                 <div class="icons">
-                    <a href="login_form.php" class="cart-btn">Donate Now</a>
+                    <a href="DonateNow.php" name="donatenow" value="Sulawesi"class="cart-btn">Donate Now</a>
                 </div>
             </div>
 
             <div class="content">
-                <h3>Bekasi</h3>
+                <h3>Sulawesi</h3>
             </div>
         </div>
 
