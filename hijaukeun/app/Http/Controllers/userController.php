@@ -16,17 +16,22 @@ class userController extends Controller
         return view('user/login', $data);
     }
 
+    public function register()
+    {
+        return view('register');
+    }
+
     public function register_action(Request $request)
     {
         $request->validate([
-            'name' => 'required',
+            'nama' => 'required',
             'email'=> 'required',
             'password' => 'required',
             'cpassword' => 'required|same:password',
         ]);
 
         $user = new User([
-            'name' => $request->nama,
+            'nama' => $request->nama,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);

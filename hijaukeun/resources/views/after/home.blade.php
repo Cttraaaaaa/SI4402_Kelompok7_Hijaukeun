@@ -18,7 +18,7 @@
     </nav>
 
     <div class="icons">
-        <a href="Pro_user.php" class="fas fa-user"></a>
+        <a href="{{ route('login') }}" class="fas fa-user"></a>
     </div>
 
 </header>
