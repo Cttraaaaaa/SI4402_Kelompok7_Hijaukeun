@@ -16,7 +16,6 @@ class DonasiController extends Controller
 
     public function index()
     {
-        $donasi=Donasi::orderBy('id','nama')->get();
         return view('pages.masyarakat.donasi');
     }
 
@@ -39,7 +38,7 @@ class DonasiController extends Controller
         
         $donasi = $request->all();
 
-        $donasi = Donasi::create([
+        $donasi = donasi::create([
             'jumlah' => $request -> jml,
             'nama' => $request -> nama,
             'email' => $request -> email,
@@ -49,7 +48,7 @@ class DonasiController extends Controller
         ]);
 
         Alert::success('Berhasil', 'Terimakasih Orang baik !! :)');
-        return redirect('user/pengaduan');
+        return redirect('user/dashboard');
     }
 
     public function edit(Request $request, $id)
