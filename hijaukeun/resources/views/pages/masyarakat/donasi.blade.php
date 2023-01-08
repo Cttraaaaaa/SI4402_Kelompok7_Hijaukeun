@@ -30,15 +30,17 @@
     <input type="checkbox" name="" id="toggler">
     <label for="toggler" class="fas fa-bars"></label>
 
-    <a href="#" class="logo">Hijau<span>Keun</span></a>
+    <a href="{{ url('user')}}" class="logo">Hijau<span>Keun</span></a>
 
     <nav class="navbar">
-        <a href="index.php">home</a>
-        <a href="#about">about</a>
-        <a href="#donation">Donation</a>
-        <a href="#service">services</a>
-        <a href="#locate">location</a>
-        <a href="#contact">contact</a>
+        <a href="{{ url('user')}}">home</a>
+        <a href="{{ url('user')}}">about</a>
+        <a href="{{ url('user')}}">Donation</a>
+        <a href="{{ url('user')}}">services</a>
+        <a href="{{ url('user')}}">location</a>
+        <a href="{{ url('user')}}">contact</a>
+        <a href="{{ url('user/pengaduan')}} ">History</a>
+        <a href="{{ url('user/index')}}">Ajukan</a>
     </nav>
 
     <div class="icons">

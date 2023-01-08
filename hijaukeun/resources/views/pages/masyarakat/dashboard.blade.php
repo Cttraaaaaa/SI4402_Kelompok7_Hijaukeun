@@ -157,7 +157,7 @@
             <div class="image">
                 <img src="./img/HUTAN2.jpg" alt="">
                 <div class="icons">
-                    <a href="{{ url('register')}}" name="donatenow" value="Banten" class="cart-btn">Donate Now</a>
+                    <a href="{{ url('user/donasi')}}" name="donatenow" value="Banten" class="cart-btn">Donate Now</a>
                 </div>
             </div>
             <div class="content">
@@ -169,7 +169,7 @@
             <div class="image">
                 <img src="./img/HUTAN3.jpg" alt="">
                 <div class="icons">
-                    <a href="{{ url('register')}}" name="donatenow" value="Sumatera" class="cart-btn">Donate Now</a>
+                    <a href="{{ url('user/donasi')}}" name="donatenow" value="Sumatera" class="cart-btn">Donate Now</a>
                 </div>
             </div>
 
@@ -182,7 +182,7 @@
             <div class="image">
                 <img src="./img/HUTAN4.jpg" alt="">
                 <div class="icons">
-                    <a href="{{ url('register')}}" name="donatenow" value="Sulawesi"class="cart-btn">Donate Now</a>
+                    <a href="{{ url('user/donasi')}}" name="donatenow" value="Sulawesi"class="cart-btn">Donate Now</a>
                 </div>
             </div>
 
