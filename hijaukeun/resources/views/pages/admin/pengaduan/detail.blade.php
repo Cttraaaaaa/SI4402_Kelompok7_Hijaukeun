@@ -8,7 +8,7 @@ Detail Pengaduan
 <main class="h-full pb-16 overflow-y-auto">
   <div class="container grid px-6 mx-auto">
     <h2 class="my-6 text-2xl font-semibold text-center text-gray-700 dark:text-gray-200">
-      Detail Pengaduan
+      Detail Pengajuan
     </h2>
 
 
@@ -72,13 +72,13 @@ Detail Pengaduan
       </div>
       <div class="flex justify-center my-4">
         <a href="{{ url('admin/pengaduan/cetak', $item->id)}}"
-          class="px-5 py-3 font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
+          class="px-5 py-3 font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-green">
           Export ke PDF
         </a>
       </div>
       <div class="flex justify-center my-6">
         <a href="{{ route('tanggapan.show', $item->id)}}"
-          class="px-5 py-3 font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
+          class="px-5 py-3 font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-green">
           Berikan Tanggapan
         </a>
       </div>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Laporan</title>
+  <title>Laporan Pengajuan web Hijaukeun</title>
   <style>
     img{
       height: 100px;;
@@ -19,13 +19,12 @@
 <body>
   <div class="container">
     <div class="title text-center mb-5">
-      <h2>Layanan Pengaduan Masyarakat Online</h2>
-      <h5><a href="https://www.pengkat.madfariz.my.id/" target="_blank">www.pengkat.madfariz.my.id</a></h5>
+      <h2>Hijaukeun pengajuan daerah penghijauan</h2>
     </div>
     <hr class="solid">
 
     <div>
-      <h6>Laporan Pengaduan</h6>
+      <h6>Pengajuan daerah</h6>
       <h6>{{ $pengaduan->created_at->format('l, d F Y') }}</h6>
     </div>
     <hr class="solid">
@@ -39,7 +38,7 @@
     <table class="table table-bordered">
       <thead class="thead">
         <tr>
-          <th scope="col">Laporan Pengaduan</th>
+          <th scope="col">Pengajuan</th>
           <th scope="col">Status</th>
         </tr>
       </thead>

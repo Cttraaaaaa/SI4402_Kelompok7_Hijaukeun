@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PENGKAT | Pengaduan Masyarakat</title>
+  <title>Hijaukeun</title>
   
   <style>
     .thead{
@@ -19,8 +19,9 @@
 <body>
   <div class="container mt-5">
     <div class="title text-center mb-5">
-      <h2>Laporan Layanan Pengaduan Online</h2>
-      <h5><a href="https://www.pengkat.madfariz.my.id/" target="_blank">www.pengkat.madfariz.my.id</a></h5>
+      <h2>Laporan Pengajuan daerah web Hijaukeun</h2>
+      <h5><a href="https://github.com/Cttraaaaaa/SI4402_Kelompok7_Hijaukeun" target="_blank">www.hijaukeun.kel07</a></h5>
+      <a>Terimakasih Orang-Orang baik !</a>
     </div>
     <table class="table table-bordered">
       <thead class="thead">

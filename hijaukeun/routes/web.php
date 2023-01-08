@@ -48,7 +48,8 @@ Route::prefix('user')
                 Route::resource('pengaduan', 'MasyarakatController');
                 Route::get('pengaduan', 'MasyarakatController@lihat');
                 Route::get('index', 'MasyarakatController@create');
-                
+                Route::get('donasi','DonasiController@create');
+                Route::post('donasi','DonasiController@store');
                 
 });
 

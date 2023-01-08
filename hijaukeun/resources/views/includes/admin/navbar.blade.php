@@ -1,9 +1,9 @@
 <header class="z-10 py-4 bg-white shadow-md dark:bg-gray-800">
-  <div class="container flex items-center justify-end h-full px-6 mx-auto text-purple-600 dark:text-purple-300">
+  <div class="container flex items-center justify-end h-full px-6 mx-auto text-green-600 dark:text-green-300">
     <ul class="flex items-center flex-shrink-2 space-x-6">
       <!-- Theme toggler -->
       <li class="flex">
-        <button class="rounded-md focus:outline-none focus:shadow-outline-purple" @click="toggleTheme"
+        <button class="rounded-md focus:outline-none focus:shadow-outline-blue" @click="toggleTheme"
           aria-label="Toggle color mode">
           <template x-if="!dark">
             <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
@@ -25,7 +25,7 @@
 
       <!-- Profile menu -->
       <li class="relative">
-        <button class="align-middle rounded-full focus:shadow-outline-purple focus:outline-none"
+        <button class="align-middle rounded-full focus:shadow-outline-green focus:outline-none"
           @click="toggleProfileMenu" @keydown.escape="closeProfileMenu" aria-label="Account" aria-haspopup="true">
           <img class="object-cover w-8 h-8 rounded-full"
             src="https://shanghai-date.com/uploads/g/t/t/h/q2t34kjldqrqv0pl7ihh.png" alt="" aria-hidden="true" />
