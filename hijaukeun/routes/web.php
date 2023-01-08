@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\homeController;
-use App\Http\Controllers\userController;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,14 +16,44 @@ use App\Http\Controllers\userController;
 */
 
 Route::get('/', function () {
-    return view('after.home');
+    
+    return view('welcome');
 });
 
-Route::get('\home', [homeController::class, 'Home']);
-Route::get('register', [userController::class, 'register'])->name('register');
-Route::post('register', [userController::class, 'register_action'])->name('register.action');
-Route::get('login', [userController::class, 'login'])->name('login');
-Route::post('login', [userController::class, 'login_action'])->name('login.action');
-Route::get('password', [userController::class, 'password'])->name('password');
-Route::post('password', [userController::class, 'password_action'])->name('password.action');
-Route::get('logout', [userController::class, 'logout'])->name('logout');
+// Admin/Petugass
+Route::prefix('admin')
+    ->middleware(['auth', 'admin'])
+
+    ->group(function() {
+        Route::get('/', 'DashboardController@index')->name('dashboard');
+
+        Route::resource('pengaduans', 'PengaduanController');
+
+        Route::resource('tanggapan', 'TanggapanController');
+
+        Route::get('masyarakat', 'AdminController@masyarakat');
+        Route::resource('petugas', 'PetugasController');
+
+        Route::get('laporan', 'AdminController@laporan');
+        Route::get('laporan/cetak', 'AdminController@cetak');
+        Route::get('pengaduan/cetak/{id}', 'AdminController@pdf');
+});
+
+
+// Masyarakat
+Route::prefix('user')
+    ->middleware(['auth', 'MasyarakatMiddleware'])
+    ->group(function() {
+				Route::get('/', 'MasyarakatController@index')->name('masyarakat-dashboard');
+                Route::resource('pengaduan', 'MasyarakatController');
+                Route::get('pengaduan', 'MasyarakatController@lihat');
+                Route::get('index', 'MasyarakatController@create');
+                
+                
+});
+
+
+
+
+
+require __DIR__.'/auth.php';
