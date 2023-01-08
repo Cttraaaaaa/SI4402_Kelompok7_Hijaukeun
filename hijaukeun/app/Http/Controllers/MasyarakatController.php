@@ -86,6 +86,11 @@ class MasyarakatController extends Controller
         ]);
     }
 
+    public function profile()
+    {
+        return view('pages.masyarakat.profile');
+    }
+
     public function show($id)
     {
         $item = Pengaduan::with([
@@ -98,6 +103,29 @@ class MasyarakatController extends Controller
             'item' => $item,
             'tangap' => $tangap
         ]);
+    }
+
+    public function profile_action(Request $request)
+    {   
+         
+        $request->validate([
+            'name' => 'required',
+            'phone' => 'required',
+
+        ]);
+        $data = User::find(Auth::id());
+        $data->nama = $request->name;
+        $data->phone = $request->phone;
+        $request->session()->regenerate();
+        return back();
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('/');
     }
 
     /**

@@ -50,6 +50,9 @@ Route::prefix('user')
                 Route::get('index', 'MasyarakatController@create');
                 Route::get('donasi','DonasiController@create');
                 Route::post('donasi','DonasiController@store');
+                Route::get('profile', 'MasyarakatController@Profile');
+                Route::post('profile', 'MasyarakatController@Profile_action');
+                Route::get('logout', 'MasyarakatController@logout');
                 
 });
 

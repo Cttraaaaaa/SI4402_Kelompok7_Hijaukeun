@@ -45,7 +45,7 @@
     </nav>
 
     <div class="icons">
-        <a href="{{ url('user/pro')}}" class="fas fa-user"></a>
+        <a href="{{ url('user/profile')}}" class="fas fa-user"></a>
     </div>
 
 </header>
