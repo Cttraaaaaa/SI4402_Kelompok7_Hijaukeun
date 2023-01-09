@@ -13,7 +13,7 @@
       </a>
 
       <a class="inline-flex items-center text-sm mr-5 font-semibold transition-colors duration-150 "
-        href="{{ url('user')}} ">
+        href="{{ url('history')}} ">
         <span class="ml-4">History </span>
       </a>
 

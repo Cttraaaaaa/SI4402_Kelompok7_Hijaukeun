@@ -28,7 +28,7 @@ Data pengajuan
               <th class="px-4 py-3">Foto</th>
               <th class="px-4 py-3">Tanggal</th>
               <th class="px-4 py-3">Status</th>
-              <th class="px-4 py-3">Aksi</th>
+              <th class="px-4 py-3">Detail</th>
             </tr>
           </thead>
           <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
@@ -37,8 +37,8 @@ Data pengajuan
               <td class="px-4 py-3">
                 <div class="flex items-center text-sm">
                   <!-- Avatar with inset shadow -->
-                  <div class="relative hidden mr-3">
-                    <img class=" h-32 w-35 " src=" /img/{{($item->image)}}" alt=""/>
+                  <div class="relative mr-3">
+                    <img class=" h-32 w-35 " src=" /public/img/{{($item->image)}}" alt=""/>
                   </div>
                 </div>
               </td>
@@ -70,7 +70,7 @@ Data pengajuan
               @endif
               <td>
                 <a href="{{ route('pengaduan.show', $item->id)}} "
-                  class="flex items-center justify-between  text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
+                  class="flex items-center justify-between  text-sm font-medium leading-5 text-green-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
                   aria-label="Detail">
 
                   <svg class="w-5 h-5" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">

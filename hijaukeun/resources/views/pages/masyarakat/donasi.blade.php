@@ -62,10 +62,11 @@
     <div class="row">
         <div class="col-lg-6 mt-5 m-5">
         <div class="form-container">
-            <form action="{{ url('donasi.store')}}" method="POST" enctype="multipart/form-data">
+        <form action="{{ url('history') }}" method="POST" enctype="multipart/form-data">
+        @csrf
                 <h4>Fill Donation Amount</h4>
                 <div class="mb-3">
-                    <input type="jml" name="jml" required placeholder="Rp.                                                                                  0">
+                    <input type="jumlah" name="jumlah" required placeholder="Rp.                                                                                  0">
                 </div>
                 <div class="mb-3">
                     <h4>Incognito Name</h4>
@@ -78,12 +79,19 @@
                 <div class="mb-3">
                     <h4>Payment</h4>
                     <select name="pembayaran" required placeholder="Choose your way to donate">
-                        <option value="user">Shopeepay</option>
-                        <option value="admin">Gopay</option>
-                        <option value="admin">Dana</option>
-                        <option value="admin">Transfer Bank</option>
+                        <option value="shopee">Shopeepay</option>
+                        <option value="gopay">Gopay</option>
+                        <option value="dana">Dana</option>
+                        <option value="transfer bank">Transfer Bank</option>
                     </select>
                 </div>
+                <label for="image" class="block mt-4 text-sm">
+                    <span class="text-gray-700 dark:text-gray-400">Bukti pembayaran</span>
+                    <input
+                    class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-green dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                    type="file" value="{{ old('image')}}" name="image" required/>
+                </label>
+
                 <div class="mb-3">
                     <h4>Your Hope for this donation (Optional)</h4>
                     <input type="harapan" name="harapan" required placeholder="Enter your hope">

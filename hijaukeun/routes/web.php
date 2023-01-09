@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\DonasiController;
 use Illuminate\Support\Facades\Route;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -19,6 +21,7 @@ Route::get('/', function () {
     
     return view('welcome');
 });
+
 
 // Admin/Petugass
 Route::prefix('admin')
@@ -48,14 +51,15 @@ Route::prefix('user')
                 Route::resource('pengaduan', 'MasyarakatController');
                 Route::get('pengaduan', 'MasyarakatController@lihat');
                 Route::get('index', 'MasyarakatController@create');
-                Route::get('donasi','DonasiController@create');
-                Route::post('donasi','DonasiController@store');
                 Route::get('profile', 'MasyarakatController@Profile');
                 Route::post('profile', 'MasyarakatController@Profile_action');
                 Route::get('logout', 'MasyarakatController@logout');
                 
 });
 
+Route::get('/donasi', [DonasiController::class, 'index']);
+Route::post('/donasi', [DonasiController::class,'store']);
+Route::get('/history', [DonasiController::class,'lihat']);
 
 
 

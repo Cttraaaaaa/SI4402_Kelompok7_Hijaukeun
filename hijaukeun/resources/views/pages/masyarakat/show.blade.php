@@ -1,7 +1,7 @@
 @extends('layouts.masyarakat')
 
 @section('title')
-Dashboard
+Detail
 @endsection
 
 @section('content')
