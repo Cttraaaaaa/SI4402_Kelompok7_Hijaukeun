@@ -44,10 +44,6 @@
         <a href="{{ url('user/index')}}">Ajukan</a>
     </nav>
 
-    <div class="icons">
-        <a href="{{ url('user/profile')}}" class="fas fa-user"></a>
-    </div>
-
 </header>
 
 <!-- header section ends -->

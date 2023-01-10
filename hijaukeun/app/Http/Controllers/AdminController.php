@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Pengaduan;
 use App\Models\Tanggapan;
 use App\Models\User;
+use App\Models\Donasi;
 use PDF;
 
 
@@ -35,6 +36,15 @@ class AdminController extends Controller
         $data = DB::table('users')->where('roles', '=', 'USER')->get();
 
         return view('pages.admin.masyarakat', [
+            'data' => $data
+        ]);
+    }
+    public function donasi()
+    {
+
+        $data = Donasi::orderBy('created_at', 'desc')->paginate();
+
+        return view('pages.admin.donasi', [
             'data' => $data
         ]);
     }

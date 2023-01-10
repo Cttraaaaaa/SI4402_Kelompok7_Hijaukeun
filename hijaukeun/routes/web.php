@@ -34,10 +34,12 @@ Route::prefix('admin')
 
         Route::resource('tanggapan', 'TanggapanController');
 
+
         Route::get('masyarakat', 'AdminController@masyarakat');
         Route::resource('petugas', 'PetugasController');
 
         Route::get('laporan', 'AdminController@laporan');
+        Route::get('donasi', 'AdminController@donasi');
         Route::get('laporan/cetak', 'AdminController@cetak');
         Route::get('pengaduan/cetak/{id}', 'AdminController@pdf');
 });
@@ -60,6 +62,7 @@ Route::prefix('user')
 Route::get('/donasi', [DonasiController::class, 'index']);
 Route::post('/donasi', [DonasiController::class,'store']);
 Route::get('/history', [DonasiController::class,'lihat']);
+Route::post('/history', [DonasiController::class,'lihat']);
 
 
 
