@@ -66,7 +66,7 @@
         @csrf
                 <h4>Fill Donation Amount</h4>
                 <div class="mb-3">
-                    <input type="jumlah" name="jumlah" required placeholder="Rp.                                                                                  0">
+                    <input type="jumlah" name="jumlah" required placeholder="Rp.    ">
                 </div>
                 <div class="mb-3">
                     <h4>Incognito Name</h4>
