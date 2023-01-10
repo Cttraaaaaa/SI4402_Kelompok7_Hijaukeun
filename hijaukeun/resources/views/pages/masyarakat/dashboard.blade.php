@@ -39,9 +39,9 @@
         <a href="#donation">Donation</a>
         <a href="#service">services</a>
         <a href="#locate">location</a>
-        <a href="#contact">contact</a>
         <a href="{{ url('user/pengaduan')}} ">History</a>
         <a href="{{ url('user/index')}}">Ajukan</a>
+        <a href="{{ url('relawan')}}">Relawan</a>
     </nav>
 
 </header>

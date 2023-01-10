@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 
 use App\Models\Pengaduan;
 use App\Models\Tanggapan;
+use App\Models\Relawan;
 use App\Models\User;
 use App\Models\Donasi;
 use PDF;
@@ -45,6 +46,16 @@ class AdminController extends Controller
         $data = Donasi::orderBy('created_at', 'desc')->paginate();
 
         return view('pages.admin.donasi', [
+            'data' => $data
+        ]);
+    }
+
+    public function relawan()
+    {
+
+        $data = Relawan::orderBy('created_at', 'desc')->paginate();
+
+        return view('pages.admin.relawan', [
             'data' => $data
         ]);
     }
