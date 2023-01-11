@@ -3,7 +3,6 @@
     <div class="flex justify-center flex-1">
       <a class="inline-flex items-center text-sm mr-5 font-semibold transition-colors duration-150 "
         href="{{ url('user')}}">
-
         <span class="ml-4">Home</span>
       </a>
 
@@ -16,7 +15,6 @@
         href="{{ url('history')}} ">
         <span class="ml-4">History </span>
       </a>
-
     </div>
 
     <ul class="flex items-center flex-shrink-2 space-x-6">
@@ -41,6 +39,7 @@
       <li class="flex">
         <p>{{ Auth::user()->name }} </p>
       </li>
+
       <!-- Profile menu -->
       <li class="relative">
         <button class="align-middle rounded-full focus:shadow-outline-green focus:outline-none"
@@ -66,7 +65,7 @@
                       d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1">
                     </path>
                   </svg>
-                  <span>Log out</span>
+                  <span>LogOut</span>
                 </a>
               </form>
             </li>

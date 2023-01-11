@@ -3,7 +3,6 @@
 @section('title')
 Tanggapan
 @endsection
-
 @section('content')
 <main class="h-full pb-16 overflow-y-auto">
   <div class="container px-6 mx-auto grid">
@@ -24,17 +23,14 @@ Tanggapan
 
         <label class="block mt-4 text-sm">
           <span class="text-gray-700 dark:text-gray-400">Status</span>
-
           <select
             class="block w-full text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-blue-400 focus:outline-none focus:shadow-outline-green dark:focus:shadow-outline-gray"
             name="status" required>
             <option value="Belum di Proses">Belum di Proses</option>
             <option value="Sedang di Proses">Sedang di Proses</option>
             <option value="Selesai">Selesai</option>
-
           </select>
         </label>
-
 
         <button type="submit"
           class="mt-4 px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-green">

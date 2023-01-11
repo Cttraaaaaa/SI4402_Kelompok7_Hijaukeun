@@ -1,6 +1,7 @@
 <header class="z-10 py-4 bg-white shadow-md dark:bg-gray-800">
   <div class="container flex items-center justify-end h-full px-6 mx-auto text-green-600 dark:text-green-300">
     <ul class="flex items-center flex-shrink-2 space-x-6">
+
       <!-- Theme toggler -->
       <li class="flex">
         <button class="rounded-md focus:outline-none focus:shadow-outline-blue" @click="toggleTheme"
@@ -19,6 +20,7 @@
           </template>
         </button>
       </li>
+
       <li class="flex">
         <p>{{ Auth::user()->name }} </p>
       </li>
@@ -48,7 +50,7 @@
                       d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1">
                     </path>
                   </svg>
-                  <span>Log out</span>
+                  <span>LogOut</span>
                 </a>
               </form>
             </li>

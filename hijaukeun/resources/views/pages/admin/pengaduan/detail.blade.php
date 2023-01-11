@@ -3,21 +3,17 @@
 @section('title')
 Detail Pengaduan
 @endsection
-
 @section('content')
 <main class="h-full pb-16 overflow-y-auto">
   <div class="container grid px-6 mx-auto">
     <h2 class="my-6 text-2xl font-semibold text-center text-gray-700 dark:text-gray-200">
       Detail Pengajuan
     </h2>
-
-
     <div class="w-full mb-8 overflow-hidden rounded-lg shadow-xs">
       <div class="w-full overflow-x-auto">
         @foreach($item->details as $ite)
         <div
           class="text-gray-800 text-sm font-semibold px-4 py-4 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800 dark:text-gray-400 ">
-
           <h2>Nama : {{ $ite->name }}</h2>
           <h2 class="mt-4">NIK : {{ $ite->user_nik }}</h2>
           <h2 class="mt-4">No Telepon : {{ $item->user->phone }}</h2>
@@ -54,13 +50,12 @@ Detail Pengaduan
             </p>
           </div>
         </div>
+
         @endforeach
         <div class="px-4 py-3 mb-8 flex bg-white rounded-lg shadow-md dark:text-gray-400   dark:bg-gray-800">
-
           <div class="text-center flex-1">
             <h1 class="mb-8 font-semibold">Tanggapan</h1>
             <p class="text-gray-800 dark:text-gray-400">
-
               @if (empty($tangap->tanggapan))
               Belum ada tanggapan
               @else
@@ -73,13 +68,13 @@ Detail Pengaduan
       <div class="flex justify-center my-4">
         <a href="{{ url('admin/pengaduan/cetak', $item->id)}}"
           class="px-5 py-3 font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-green">
-          Export ke PDF
+          Unduh file (pdf)
         </a>
       </div>
       <div class="flex justify-center my-6">
         <a href="{{ route('tanggapan.show', $item->id)}}"
           class="px-5 py-3 font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-green">
-          Berikan Tanggapan
+          Beri Tanggapan
         </a>
       </div>
     </div>

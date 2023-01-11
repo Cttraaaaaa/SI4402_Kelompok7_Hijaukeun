@@ -12,8 +12,6 @@ Dashboard
     <h2 class="my-6 text-2xl font-semibold text-center text-gray-700 dark:text-gray-200">
       Silahkan ajukan daerah Anda!
     </h2>
-
-
     @if ($errors->any())
     <div class="alert alert-danger">
       <ul>
@@ -25,7 +23,6 @@ Dashboard
     @endif
     <form action="{{ route('pengaduan.store')}} " method="POST" enctype="multipart/form-data">
       @csrf
-
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <label class="block text-sm">
           <span class="text-gray-700 dark:text-gray-400">Laporan</span>
@@ -34,7 +31,6 @@ Dashboard
             rows="8" type="text" placeholder="deskripsikan daerah anda secara singkat serta masalah yang dihadapi" value="{{ old('description')}}" required
             name="description"></textarea>
         </label>
-
         <label for="image" class="block mt-4 text-sm">
           <span class="text-gray-700 dark:text-gray-400">Lampiran foto </span>
           <input
@@ -45,7 +41,6 @@ Dashboard
           class="mt-4 px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-green">
           Ajukan
         </button>
-
       </div>
     </form>
 </main>
