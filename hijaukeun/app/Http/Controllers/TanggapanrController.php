@@ -2,18 +2,17 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-
-use App\Models\Pengaduan;
+use App\Models\Relawan;
 use App\Models\Tanggapan;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use RealRashid\SweetAlert\Facades\Alert;
 
-
-class TanggapanController extends Controller
+class TanggapanrController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -42,28 +41,20 @@ class TanggapanController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    { 
-        DB::table('pengaduans')->where('id', $request->pengaduan_id)->update([
-            'status'=> $request->status,
-        ]);
+    {
 
         DB::table('relawan')->where('id', $request->id)->update([
             'status'=> $request->status,
-        ]);
+        ]);   
 
-        
-
-        $petugas_id = Auth::user()->id;        
-
-            
+      
         $data = $request->all();
 
-        $data['pengaduan_id'] = $request->pengaduan_id;
-        $data['petugas_id']=$petugas_id;
+        $data['relawan_id'] = $request->pengaduan_id;
 
-        Alert::success('Berhasil', 'berhasil ditanggapi');
+        Alert::success('Berhasil', 'Daftar berhasil ditanggapi');
         Tanggapan::create($data);
-        return redirect('/admin');
+        return redirect('admin/relawan');
     }
 
     /**
@@ -74,14 +65,7 @@ class TanggapanController extends Controller
      */
     public function show($id)
     {
-
-        $item = Pengaduan::with([
-            'details', 'user' 
-        ])->findOrFail($id);
-
-        return view('pages.admin.tanggapan.add',[
-        'item' => $item
-        ]);
+        //
     }
 
     /**
@@ -104,7 +88,7 @@ class TanggapanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+        //
     }
 
     /**
@@ -115,6 +99,6 @@ class TanggapanController extends Controller
      */
     public function destroy($id)
     {
-
+        //
     }
 }

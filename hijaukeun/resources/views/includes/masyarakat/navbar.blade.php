@@ -17,6 +17,11 @@
         <span class="ml-4">History </span>
       </a>
 
+      <a class="inline-flex items-center text-sm mr-5 font-semibold transition-colors duration-150 "
+        href="{{ url('historyr')}} ">
+        <span class="ml-4">Pengajuan Relawan </span>
+      </a>
+
     </div>
 
     <ul class="flex items-center flex-shrink-2 space-x-6">

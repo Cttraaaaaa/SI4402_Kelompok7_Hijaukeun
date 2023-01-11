@@ -36,12 +36,17 @@ Route::prefix('admin')
         Route::resource('tanggapan', 'TanggapanController');
 
 
+
+
         Route::get('masyarakat', 'AdminController@masyarakat');
         Route::resource('petugas', 'PetugasController');
+        Route::resource('relawan', 'RelawanController');
+
 
         Route::get('laporan', 'AdminController@laporan');
         Route::get('donasi', 'AdminController@donasi');
         Route::get('relawan', 'AdminController@relawan');
+
         Route::get('laporan/cetak', 'AdminController@cetak');
         Route::get('pengaduan/cetak/{id}', 'AdminController@pdf');
 });
@@ -67,6 +72,9 @@ Route::get('/history', [DonasiController::class,'lihat']);
 Route::post('/history', [DonasiController::class,'lihat']);
 Route::get('/relawan', [RelawanController::class, 'index']);
 Route::post('/relawan', [RelawanController::class, 'store']);
+Route::get('/historyr', [RelawanController::class, 'lihat']);
+Route::get('/detailr', [RelawanController::class, 'lihat']);
+
 
 
 

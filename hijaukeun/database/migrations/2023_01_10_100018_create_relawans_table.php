@@ -21,6 +21,7 @@ class CreateRelawansTable extends Migration
             $table->string('domisili');
             $table->integer('nohp');
             $table->string('email');
+            $table->string('status')->default('Belum di Acc');
             $table->string('image');
 
             
@@ -37,6 +38,6 @@ class CreateRelawansTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('relawans');
+        Schema::dropIfExists('relawan');
     }
 }

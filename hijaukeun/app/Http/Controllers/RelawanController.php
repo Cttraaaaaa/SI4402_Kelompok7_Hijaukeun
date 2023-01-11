@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Relawan;
 use Illuminate\Http\Request;
+use App\Models\Pengaduan;
+use App\Models\Tanggapan;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class RelawanController extends Controller
@@ -15,7 +17,10 @@ class RelawanController extends Controller
      */
     public function index()
     {
-        return view('pages.masyarakat.relawan');
+        $data = Relawan::orderBy('created_at', 'DESC')->get();
+        return view('pages.masyarakat.relawan', [
+            'data' => $data
+        ]);
     }
 
     /**
@@ -63,9 +68,28 @@ class RelawanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+
+    public function show(request $id)
     {
-        //
+
+        $data = Relawan::orderBy('created_at', 'desc')->get();
+
+        $tangap = Relawan::where('id', $id)->first();
+
+        return view('pages.admin.relawan.detailr', [
+            'data' => $data,
+            'tangap' => $tangap
+        ]);
+
+    }
+
+    public function lihat()
+    {
+        $data = Relawan::orderBy('created_at', 'desc')->get();
+
+        return view('pages.masyarakat.historyr', [
+            'data' => $data
+        ]);
     }
 
     /**
@@ -88,7 +112,8 @@ class RelawanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $status->update($data);
+        return redirect('admin/relawan');
     }
 
     /**
@@ -99,6 +124,10 @@ class RelawanController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $relawan = Relawan::find($id);
+        $relawan->delete();
+
+        Alert::success('Berhasil', 'daftar relawan telah dihapus dari daftar');
+        return redirect('admin/relawan');
     }
 }

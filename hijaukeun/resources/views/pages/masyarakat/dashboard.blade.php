@@ -140,7 +140,7 @@
             <div class="image">
                 <img src="./img/HUTAN1.jpeg" alt="">
                 <div class="icons">
-                    <a href="{{ url('/donasi')}}" name="donatenow" value="kalimantan" class="cart-btn">Donate Now</a>
+                    <a href="{{ url('donasi')}}" name="donatenow" value="kalimantan" class="cart-btn">Donate Now</a>
                 </div>
             </div>
 
@@ -165,7 +165,7 @@
             <div class="image">
                 <img src="./img/HUTAN3.jpg" alt="">
                 <div class="icons">
-                    <a href="{{ url('user/donasi')}}" name="donatenow" value="Sumatera" class="cart-btn">Donate Now</a>
+                    <a href="{{ url('donasi')}}" name="donatenow" value="Sumatera" class="cart-btn">Donate Now</a>
                 </div>
             </div>
 

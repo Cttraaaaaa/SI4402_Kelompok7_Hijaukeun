@@ -22,6 +22,10 @@ class AdminController extends Controller
     public function index($id)
     {
 
+        $item = Relawan::with([
+            'details', 'nama'
+        ])->findOrFail($id);
+
         $item = Pengaduan::with([
             'details', 'user'
         ])->findOrFail($id);
@@ -55,7 +59,7 @@ class AdminController extends Controller
 
         $data = Relawan::orderBy('created_at', 'desc')->paginate();
 
-        return view('pages.admin.relawan', [
+        return view('pages.admin.relawan.index', [
             'data' => $data
         ]);
     }

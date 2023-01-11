@@ -5,31 +5,32 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Tanggapan extends Model
+class Tanggapanr extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'id', 'pengaduan_id', 'tanggapan', 'petugas_id',
+        'id', 'relawan_id', 'tanggapan',
     ];
 
     protected $hidden = [
     
     ];
 
-    public function pengaduan()
+    public function relawan()
     {
-    	return $this->hasOne(Pengaduan::class,'id', 'id');
+    	return $this->hasOne(Relawan::class,'id', 'id');
     }
 
     public function proses()
     {
-    return $this->hasMany(Pengaduan::class, 'status_id','status');
+    return $this->hasMany(Relawan::class, 'status_id','status');
     }
 
     public function country() {
-        return $this->hasOne(Pengaduan::class);
+        return $this->hasOne(Relawan::class);
     }    
+
 
     
 }
