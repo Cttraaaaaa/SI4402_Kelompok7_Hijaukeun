@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hijaukeun</title>
+    <title>HijauKeun</title>
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- custom css file link  -->
@@ -18,21 +19,15 @@
             font-family: 'Overpass', sans-serif;
             scroll-behavior: smooth;
         }
-    
     </style>
 </head>
 
 <body>
-
 <!-- header section starts  -->
-
 <header>
-
     <input type="checkbox" name="" id="toggler">
     <label for="toggler" class="fas fa-bars"></label>
-
     <a href="#" class="logo">Hijau<span>Keun</span></a>
-
     <nav class="navbar">
         <a href="#home">home</a>
         <a href="#about">about</a>
@@ -43,55 +38,39 @@
         <a href="{{ url('user/index')}}">Ajukan</a>
         <a href="{{ url('relawan')}}">Relawan</a>
     </nav>
-
 </header>
-
 <!-- header section ends -->
 
 <!-- home section starts  -->
-
 <section class="home" id="home">
-
     <div class="content">
         <h3></h3>
-        <span>#Hijaukeundunya</span>
+        <span>#HijaukeunDunya</span>
         <p>Mari kita bersama hijaukan Indonesia!</p>
         <a href="#donation" class="btn">Donate NOW !</a>
     </div>
-    
 </section>
-
 <!-- home section ends -->
 
 <!-- about section starts  -->
-
 <section class="about" id="about">
-
     <h1 class="heading"> <span> about </span> us </h1>
-
     <div class="row">
-
         <div class="video-container">
             <video src="./img/hijaukeun.mp4" loop autoplay muted></video>
         </div>
-
         <div class="content">
             <h3>why choose us?</h3>
             <p>HIJAU KEUN adalah sebuah website yang berfokus dalam penghijauan atau penanaman pepohonan di tempat atau dareah-daerah yang kekurangan penghijauan dengan menjalankan donasi untuk penanaman pohon di daerah yang sekiranya memerlukan penanaman.
             <p>Website ini dibuat berawal dari keresahan kami yang melihat banyaknya bencana alam seperti longsor yang terjadi karena salah satu penyebabnya adalah kurangnya penghijauan atau penanaman pohon di daerah tersebut.</p>
             <a href="#service" class="btn">learn more</a>
         </div>
-
     </div>
-
 </section>
-
 <!-- about section ends -->
 
 <!-- icons section starts  -->
-
 <section class="icons-container" id="service">
-
     <div class="icons">
         <img src="./img/icon-1.png" alt="">
         <div class="info">
@@ -99,7 +78,6 @@
             <span>#Hijaukeundunya</span>
         </div>
     </div>
-
     <div class="icons">
         <img src="./img/icon-2.png" alt="">
         <div class="info">
@@ -107,7 +85,6 @@
             <span>Everything about go green</span>
         </div>
     </div>
-
     <div class="icons">
         <img src="./img/icon-3.png" alt="">
         <div class="info">
@@ -115,7 +92,6 @@
             <span>you can request a place</span>
         </div>
     </div>
-
     <div class="icons">
         <img src="./img/icon-4.png" alt="">
         <div class="info">
@@ -123,19 +99,13 @@
             <span>protected by eiger</span>
         </div>
     </div>
-   
 </section>
-
 <!-- icons section ends -->
 
 <!-- donation section starts  -->
-
 <section class="donate" id="donation">
-
     <h1 class="heading"> Our <span>Donation</span> </h1>
-
     <div class="box-container">
-
         <div class="box">
             <div class="image">
                 <img src="./img/HUTAN1.jpeg" alt="">
@@ -143,12 +113,10 @@
                     <a href="{{ url('donasi')}}" name="donatenow" value="kalimantan" class="cart-btn">Donate Now</a>
                 </div>
             </div>
-
             <div class="content">
                 <h3>Kalimantan</h3>
             </div>
         </div>
-
         <div class="box">
             <div class="image">
                 <img src="./img/HUTAN2.jpg" alt="">
@@ -160,7 +128,6 @@
                 <h3>Banten</h3>
             </div>
         </div>
-
         <div class="box">
             <div class="image">
                 <img src="./img/HUTAN3.jpg" alt="">
@@ -168,12 +135,10 @@
                     <a href="{{ url('donasi')}}" name="donatenow" value="Sumatera" class="cart-btn">Donate Now</a>
                 </div>
             </div>
-
             <div class="content">
                 <h3>Sumatera</h3>
             </div>
         </div>
-
         <div class="box">
             <div class="image">
                 <img src="./img/HUTAN4.jpg" alt="">
@@ -181,41 +146,27 @@
                     <a href="{{ url('donasi')}}" name="donatenow" value="Sulawesi"class="cart-btn">Donate Now</a>
                 </div>
             </div>
-
             <div class="content">
                 <h3>Sulawesi</h3>
             </div>
         </div>
-
-
     </div>
-
 </section>
-
 <!-- donation section ends -->
 
 <!-- location starts  -->
-
 <section class="locate" id="locate">
-
 <h1 class="heading"> Our <span>Location</span> </h1>
-
 <div class="container">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d785.8540733742851!2d107.82379134173532!3d-6.9553583361901286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c50f5a999681%3A0x57b11ae3f5d7b879!2zNsKwNTcnMTkuNCJTIDEwN8KwNDknMjQuNSJF!5e0!3m2!1sen!2sid!4v1665921578165!5m2!1sen!2sid" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>      
-
 </section>
-
-<!-- ends -->
+<!-- location ends -->
 
 <!-- contact section starts  -->
-
 <section class="contact" id="contact">
-
     <h1 class="heading"> <span> contact </span> us </h1>
-
     <div class="row">
-
         <form action="">
             <input type="text" placeholder="name" class="box">
             <input type="email" placeholder="email" class="box">
@@ -223,23 +174,16 @@
             <textarea name="" class="box" placeholder="message" id="" cols="30" rows="10"></textarea>
             <input type="submit" value="send message" class="btn">
         </form>
-
         <div class="image">
             <img src="./img/pp.png" alt="">
         </div>
-
     </div>
-
 </section>
-
 <!-- contact section ends -->
 
 <!-- footer section starts  -->
-
 <section class="footer">
-
     <div class="box-container">
-
         <div class="box">
             <h3>quick links</h3>
             <a href="#home">home</a>
@@ -248,7 +192,6 @@
             <a href="#locate">location</a>
             <a href="#contact">contact</a>
         </div>
-
         <div class="box">
             <h3>contact info</h3>
             <a href="#">+6212345678</a>
@@ -256,7 +199,6 @@
             <a href="#">bojongsoang, indonesia - 400104</a>
             <img src="./img/payment.png" alt="">
         </div>
-
     </div>
     <div class="credit"> created by <span> Kelompok 07 </span> | all rights reserved </div>
 </body>

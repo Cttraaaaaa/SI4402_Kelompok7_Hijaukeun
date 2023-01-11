@@ -9,7 +9,6 @@ Data pengajuan
     <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
       Data Pengajuan
     </h2>
-
     <div class="w-full mb-8 overflow-hidden rounded-lg shadow-xs">
       <div class="w-full overflow-x-auto">
         @if ($errors->any())
@@ -81,9 +80,8 @@ Data pengajuan
                   </svg>
                 </a>
               </td>
-
-
             </tr>
+
             @empty
             <tr>
               <td colspan="7" class="text-center text-gray-400">
@@ -95,7 +93,6 @@ Data pengajuan
         </table>
       </div>
     </div>
-
   </div>
 </main>
 @endsection

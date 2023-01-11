@@ -3,15 +3,12 @@
 @section('title')
 Data Pengajuan
 @endsection
-
 @section('content')
 <main class="h-full pb-16 overflow-y-auto">
   <div class="container grid px-6 mx-auto">
     <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
       Pengajuan
     </h2>
-
-
     <div class="w-full mb-8 overflow-hidden rounded-lg shadow-xs">
       <div class="w-full overflow-x-auto">
         @if ($errors->any())
@@ -73,16 +70,12 @@ Data Pengajuan
                 </span>
               </td>
 
-
               @endif
-
               <td class="px-4 py-3">
                 <div class="flex items-center space-x-4 text-sm">
-
                   <a href="{{ route('pengaduans.show', $item->id)}} "
                     class="flex items-center justify-between  text-sm font-medium leading-5 text-green-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
                     aria-label="Detail">
-
                     <svg class="w-5 h-5" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -119,7 +112,6 @@ Data Pengajuan
         </table>
       </div>
     </div>
-
   </div>
 </main>
 @endsection

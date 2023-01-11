@@ -3,14 +3,13 @@
 @section('title')
 Laporan
 @endsection
-
 @section('content')
 <main class="h-full pb-16 overflow-y-auto">
   <div class="container grid px-6 mx-auto">
     <div class="my-6 mb-6">
       <a href="{{ url('admin/laporan/cetak')}} "
         class="px-5 py-3  font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-purple">
-        Export ke PDF
+        Download file (Pdf)
       </a>
     </div>
     <div class="w-full mb-8 overflow-hidden rounded-lg shadow-xs">
@@ -54,7 +53,6 @@ Laporan
               <td class="px-4 py-3 text-sm">
                 {{ $item->created_at->format('l, d F Y') }}
               </td>
-              
               @if($item->status =='Belum di Proses')
               <td class="px-4 py-3 text-xs">
                 <span
@@ -89,7 +87,6 @@ Laporan
         </table>
       </div>
     </div>
-
   </div>
 </main>
 @endsection
