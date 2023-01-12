@@ -15,15 +15,11 @@
         href="{{ url('history')}} ">
         <span class="ml-4">History </span>
       </a>
-<<<<<<< HEAD
 
       <a class="inline-flex items-center text-sm mr-5 font-semibold transition-colors duration-150 "
         href="{{ url('historyr')}} ">
-        <span class="ml-4">Pengajuan Relawan </span>
+        <span class="ml-4">Relawan</span>
       </a>
-
-=======
->>>>>>> 15965add02499b7a2c6862734f2cd93630a464fb
     </div>
 
     <ul class="flex items-center flex-shrink-2 space-x-6">

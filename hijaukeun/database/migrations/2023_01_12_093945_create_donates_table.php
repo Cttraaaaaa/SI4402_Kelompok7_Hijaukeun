@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDonasisTable extends Migration
+class CreateDonatesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateDonasisTable extends Migration
      */
     public function up()
     {
-        Schema::create('donasi', function (Blueprint $table) {
+        Schema::create('donate', function (Blueprint $table) {
             $table->id();
 
             $table->integer('jumlah');
@@ -26,7 +26,6 @@ class CreateDonasisTable extends Migration
             $table->softDeletes();
             
             $table->timestamps();
-
         });
     }
 
@@ -37,6 +36,6 @@ class CreateDonasisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('donasi');
+        Schema::dropIfExists('donate');
     }
 }

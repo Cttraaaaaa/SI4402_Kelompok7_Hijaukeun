@@ -134,7 +134,7 @@ Dashboard
             Jumlah Donasi
           </p>
           <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
-            {{ $donasi }}
+            {{ $donate }}
           </p>
         </div>
       </div>
@@ -151,7 +151,7 @@ Dashboard
             Jumlah Pendaftar Relawan
           </p>
           <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
-            {{ $user }}
+            {{ $relawan }}
           </p>
         </div>
       </div>

@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Donasi;
+use App\Models\Donate;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
-class DonasiController extends Controller
+class DonateController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class DonasiController extends Controller
      */
     public function index()
     {
-        return view('pages.masyarakat.donasi');
+        return view('pages.masyarakat.donate');
     }
 
     /**
@@ -25,7 +25,7 @@ class DonasiController extends Controller
      */
     public function create()
     {
-        return view('pages.masyarakat.donasi');
+        return view('pages.masyarakat.donate');
     }
 
     /**
@@ -53,9 +53,20 @@ class DonasiController extends Controller
             'image'=>$request->image,
         ];
         Alert::success('Berhasil', 'Terimakasih orang baik ! :)');
-        Donasi::create($data);
-        return view('pages.masyarakat.history');
+        Donate::create($data);
+        return view('pages.masyarakat.donate');
+
     }
+
+    public function lihat()
+    {
+        $data = Donate::orderBy('created_at', 'desc')->paginate();
+
+        return view('pages.masyarakat.history', [
+            'data' => $data
+        ]);
+    }
+
 
     /**
      * Display the specified resource.
@@ -63,17 +74,7 @@ class DonasiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-
-    public function lihat()
-    {
-        $data = Donasi::orderBy('created_at', 'desc')->paginate();
-
-        return view('pages.masyarakat.history', [
-            'data' => $data
-        ]);
-    }
-
-     public function show($id)
+    public function show($id)
     {
         //
     }

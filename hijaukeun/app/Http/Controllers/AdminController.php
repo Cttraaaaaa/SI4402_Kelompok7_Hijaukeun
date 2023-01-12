@@ -9,7 +9,7 @@ use App\Models\Pengaduan;
 use App\Models\Tanggapan;
 use App\Models\Relawan;
 use App\Models\User;
-use App\Models\Donasi;
+use App\Models\Donate;
 use PDF;
 
 
@@ -44,12 +44,12 @@ class AdminController extends Controller
             'data' => $data
         ]);
     }
-    public function donasi()
+    public function donate()
     {
 
-        $data = Donasi::orderBy('created_at', 'desc')->paginate();
+        $data = Donate::orderBy('created_at', 'desc')->paginate();
 
-        return view('pages.admin.donasi', [
+        return view('pages.admin.donate', [
             'data' => $data
         ]);
     }

@@ -27,9 +27,15 @@ class Tanggapan extends Model
     return $this->hasMany(Pengaduan::class, 'status_id','status');
     }
 
-    public function country() {
+    public function country() 
+    {
         return $this->hasOne(Pengaduan::class);
     }    
+
+    public function relawan()
+    {
+    	return $this->hasOne(Relawan::class,'id', 'id');
+    }
 
     
 }

@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\DonateController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\DonasiController;
 use App\Http\Controllers\RelawanController;
 use Illuminate\Support\Facades\Route;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -44,7 +44,7 @@ Route::prefix('admin')
 
 
         Route::get('laporan', 'AdminController@laporan');
-        Route::get('donasi', 'AdminController@donasi');
+        Route::get('donate', 'AdminController@donate');
         Route::get('relawan', 'AdminController@relawan');
 
         Route::get('laporan/cetak', 'AdminController@cetak');
@@ -66,10 +66,9 @@ Route::prefix('user')
                 
 });
 
-Route::get('/donasi', [DonasiController::class, 'index']);
-Route::post('/donasi', [DonasiController::class,'store']);
-Route::get('/history', [DonasiController::class,'lihat']);
-Route::post('/history', [DonasiController::class,'lihat']);
+Route::get('donate', [DonateController::class, 'index']);
+Route::post('donate', [DonateController::class, 'store']);
+Route::get('/history', [DonateController::class, 'lihat']);
 Route::get('/relawan', [RelawanController::class, 'index']);
 Route::post('/relawan', [RelawanController::class, 'store']);
 Route::get('/historyr', [RelawanController::class, 'lihat']);

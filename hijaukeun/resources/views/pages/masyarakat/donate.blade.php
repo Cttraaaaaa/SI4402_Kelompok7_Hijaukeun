@@ -54,7 +54,7 @@
     <div class="row">
         <div class="col-lg-6 mt-5 m-5">
         <div class="form-container">
-        <form action="{{ url('history') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ url('donate') }}" method="POST" enctype="multipart/form-data">
         @csrf
                 <h4>Fill Donation Amount</h4>
                 <div class="mb-3">

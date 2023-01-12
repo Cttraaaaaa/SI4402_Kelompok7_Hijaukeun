@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 
 
 use App\Models\Pengaduan;
+use App\Models\Relawan;
 use App\Models\Tanggapan;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
@@ -77,6 +78,10 @@ class TanggapanController extends Controller
 
         $item = Pengaduan::with([
             'details', 'user' 
+        ])->findOrFail($id);
+
+        $item = Relawan::with([
+            'details', 'nama' 
         ])->findOrFail($id);
 
         return view('pages.admin.tanggapan.add',[
